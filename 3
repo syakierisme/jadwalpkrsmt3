@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kuliah Akuntansi 2025 - Politeknik Kutaraja</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js untuk interaksi smooth accordion -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Google Fonts SF Pro / Inter equivalent fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+            background-color: #000000;
+            color: #f5f5f7;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom iOS Glassmorphism */
+        .ios-glass {
+            background: rgba(28, 28, 30, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ios-card {
+            background: rgba(44, 44, 46, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .ios-card:hover {
+            background: rgba(58, 58, 60, 0.7);
+            border-color: rgba(0, 122, 255, 0.4);
+        }
+        /* iOS spring active effect */
+        .ios-tap:active {
+            transform: scale(0.97);
+            transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        /* Buttery-smooth iOS spring animation for accordion */
+        .accordion-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.4s ease-in-out;
+            opacity: 0;
+        }
+        .accordion-wrapper.open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+        }
+        .accordion-content {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-16 selection:bg-blue-500 selection:text-white">
+
+    <!-- Background Glow iOS Style -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-2xl mx-auto px-4 pt-12">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-blue-400 text-xs font-semibold tracking-wide uppercase mb-4 shadow-lg">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Politeknik Kutaraja
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+                Jadwal Kuliah Akuntansi
+            </h1>
+            <p class="text-sm sm:text-base text-gray-400 font-medium">
+                Angkatan 2025 • Semester Ganjil • TA 2026/2027
+            </p>
+        </header>
+
+        <!-- Container Jadwal berdasarkan Hari -->
+        <main class="space-y-4" x-data="{ activeDay: 'senin' }">
+            
+            <!-- SENIN -->
+            <div class="ios-card rounded-3xl overflow-hidden transition-all duration-300 shadow-xl">
+                <button @click="activeDay = activeDay === 'senin' ? null : 'senin'" 
+                        class="w-full px-6 py-5 flex items-center justify-between text-left ios-tap focus:outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                            SN
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-white tracking-wide">Senin</h2>
+                            <p class="text-xs text-gray-400">2 Sesi Perkuliahan</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-transform duration-500 cubic-bezier(0.32, 0.72, 0, 1)"
+                         :class="{ 'rotate-180 bg-blue-600 text-white': activeDay === 'senin' }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </button>
+                <div class="accordion-wrapper" :class="{ 'open': activeDay === 'senin' }">
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 pt-2 border-t border-white/10">
+                            <!-- Matkul 1 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">08.15 - 09.55</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 103</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">STATISTIK</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Sanny Fitriani Lubis, S.E., M.Si
+                                </p>
+                            </div>
+                            <!-- Matkul 2 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">10.15 - 12.45</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 209</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">AKUNTANSI BIAYA</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Marah Sutan Rangkuti, S.E., M.Si
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SELASA -->
+            <div class="ios-card rounded-3xl overflow-hidden transition-all duration-300 shadow-xl">
+                <button @click="activeDay = activeDay === 'selasa' ? null : 'selasa'" 
+                        class="w-full px-6 py-5 flex items-center justify-between text-left ios-tap focus:outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                            SL
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-white tracking-wide">Selasa</h2>
+                            <p class="text-xs text-gray-400">2 Sesi Perkuliahan</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-transform duration-500 cubic-bezier(0.32, 0.72, 0, 1)"
+                         :class="{ 'rotate-180 bg-blue-600 text-white': activeDay === 'selasa' }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </button>
+                <div class="accordion-wrapper" :class="{ 'open': activeDay === 'selasa' }">
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 pt-2 border-t border-white/10">
+                            <!-- Matkul 1 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">08.15 - 10.45</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 205</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">AUDITING 1</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Rahmaniar, S.E., M.Si., Ak, CA
+                                </p>
+                            </div>
+                            <!-- Matkul 2 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">10.45 - 12.25</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: Lab AKT & Keuangan</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">PRAKTIKUM AKUNTANSI KEUANGAN</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Sri Winaryih Ramadana, S.E., M.Si
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RABU -->
+            <div class="ios-card rounded-3xl overflow-hidden transition-all duration-300 shadow-xl">
+                <button @click="activeDay = activeDay === 'rabu' ? null : 'rabu'" 
+                        class="w-full px-6 py-5 flex items-center justify-between text-left ios-tap focus:outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                            RB
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-white tracking-wide">Rabu</h2>
+                            <p class="text-xs text-gray-400">2 Sesi Perkuliahan</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-transform duration-500 cubic-bezier(0.32, 0.72, 0, 1)"
+                         :class="{ 'rotate-180 bg-blue-600 text-white': activeDay === 'rabu' }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </button>
+                <div class="accordion-wrapper" :class="{ 'open': activeDay === 'rabu' }">
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 pt-2 border-t border-white/10">
+                            <!-- Matkul 1 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">08.15 - 10.45</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 205</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">PRESENTATION AND NEGOTIATION ENGLISH</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Zulfadli, M.Ed
+                                </p>
+                            </div>
+                            <!-- Matkul 2 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">10.15 - 12.45</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: Lab AKT & Keuangan</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">PERPAJAKAN</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Sri Winaryih Ramadana, S.E., M.Si
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KAMIS -->
+            <div class="ios-card rounded-3xl overflow-hidden transition-all duration-300 shadow-xl">
+                <button @click="activeDay = activeDay === 'kamis' ? null : 'kamis'" 
+                        class="w-full px-6 py-5 flex items-center justify-between text-left ios-tap focus:outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                            KM
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-white tracking-wide">Kamis</h2>
+                            <p class="text-xs text-gray-400">2 Sesi Perkuliahan</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-transform duration-500 cubic-bezier(0.32, 0.72, 0, 1)"
+                         :class="{ 'rotate-180 bg-blue-600 text-white': activeDay === 'kamis' }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </button>
+                <div class="accordion-wrapper" :class="{ 'open': activeDay === 'kamis' }">
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 pt-2 border-t border-white/10">
+                            <!-- Matkul 1 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">08.15 - 09.55</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: Lab AKT & Keuangan</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">EXCEL FOR ACCOUNTING</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Marah Sutan Rangkuti, S.E., M.Si
+                                </p>
+                            </div>
+                            <!-- Matkul 2 (Diperbarui jamnya) -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">10.15 - 11.55</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 205</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">ETIKA BISNIS</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Defa Poenna, S.E., M.M
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JUMAT (Ditambahkan / Diperbarui) -->
+            <div class="ios-card rounded-3xl overflow-hidden transition-all duration-300 shadow-xl">
+                <button @click="activeDay = activeDay === 'jumat' ? null : 'jumat'" 
+                        class="w-full px-6 py-5 flex items-center justify-between text-left ios-tap focus:outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                            JM
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-white tracking-wide">Jumat</h2>
+                            <p class="text-xs text-gray-400">2 Sesi Perkuliahan</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-transform duration-500 cubic-bezier(0.32, 0.72, 0, 1)"
+                         :class="{ 'rotate-180 bg-blue-600 text-white': activeDay === 'jumat' }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </button>
+                <div class="accordion-wrapper" :class="{ 'open': activeDay === 'jumat' }">
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 pt-2 border-t border-white/10">
+                            <!-- Matkul 1 -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">08.15 - 09.55</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 204</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">MANAJEMEN KEUANGAN</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Cut Intan Amalia, S.E., M.Si
+                                </p>
+                            </div>
+                            <!-- Matkul 2 (Baru: Sistem Informasi Akuntansi) -->
+                            <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">10.15 - 11.55</span>
+                                    <span class="px-3 py-1 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-bold tracking-wide shadow-sm">Paralel: 204</span>
+                                </div>
+                                <h3 class="text-base font-bold text-white mb-1">SISTEM INFORMASI AKUNTANSI</h3>
+                                <p class="text-xs text-gray-400 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                    Suprihatin Ningsih, S.E., MA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer Info -->
+        <footer class="mt-12 text-center text-xs text-gray-500">
+            <p>&copy; 2026/2027 Politeknik Kutaraja. All rights reserved.</p>
+            <p class="mt-1">Program Studi Akuntansi Angkatan 2025</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
